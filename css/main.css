@@ -16,6 +16,8 @@ input.shell {
   background-color: black;
   border: none;
   color: white;
+  font-family: sans-serif;
+  font-size:12px;
 }
 
 body {
