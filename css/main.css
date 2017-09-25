@@ -1,0 +1,24 @@
+/*
+ *  css/main.css
+ */
+
+div.shell {
+  background-color: black;
+  width: 640px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: white;
+}
+
+input.shell {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+body {
+  text-align: center;
+  background-color: #FFFEEE;
+}
