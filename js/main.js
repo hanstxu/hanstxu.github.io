@@ -8,7 +8,37 @@ document.addEventListener('DOMContentLoaded', function() {
   stdin.addEventListener('keydown', function(e) {
     if (e.keyCode == 13)
       handleInput(stdin, stdin.value);
-  }, false)
+  }, false);
+  
+  document.getElementById('about').addEventListener('click', function(e) {
+    stdin.value = 'cat about.txt';
+    handleInput(stdin, stdin.value);
+  }, false);
+  
+  document.getElementById('resume').addEventListener('click', function(e) {
+    stdin.value = 'wget resume.pdf';
+    handleInput(stdin, stdin.value);
+  }, false);
+  
+  document.getElementById('projects').addEventListener('click', function(e) {
+    stdin.value = 'wget projects';
+    handleInput(stdin, stdin.value);
+  }, false);
+  
+  document.getElementById('weblog').addEventListener('click', function(e) {
+    stdin.value = 'cat weblog';
+    handleInput(stdin, stdin.value);
+  }, false);
+  
+  document.getElementById('links').addEventListener('click', function(e) {
+    stdin.value = 'cat links.txt';
+    handleInput(stdin, stdin.value);
+  }, false);
+  
+  document.getElementById('help').addEventListener('click', function(e) {
+    stdin.value = 'help';
+    handleInput(stdin, stdin.value);
+  }, false);
 });
 
 function handleInput(stdin, value) {

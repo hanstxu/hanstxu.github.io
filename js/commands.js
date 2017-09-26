@@ -5,6 +5,7 @@
 function help(stdout) {
   stdout.innerHTML += '&nbspThe list of commands include:<br>';
   stdout.innerHTML += '&nbsp cat<br>';
+  stdout.innerHTML += '&nbsp help<br>';
   stdout.innerHTML += '&nbsp ls<br>';
   stdout.innerHTML += '&nbsp su<br>';
   stdout.innerHTML += '&nbsp wget<br>';
@@ -23,7 +24,7 @@ function cat(stdout, argv) {
     stdout.innerHTML += '&nbspError: no argument has been passed in<br>';
   else if (argv[1] == 'about.txt') {
     stdout.innerHTML += '&nbspThe author of this site is Steven Xu, who is in ';
-    stdout.innerHTML += 'his last year of <br>&nbspstudying computer science at UCLA.<br>';
+    stdout.innerHTML += 'his last year <br>&nbspof studying computer science at UCLA.<br>';
   }
   else if (argv[1] == 'resume.pdf')
     stdout.innerHTML += '&nbspCannot cat file. Maybe try wget resume.pdf<br>';
@@ -33,7 +34,6 @@ function cat(stdout, argv) {
     stdout.innerHTML += '&nbspIn my years learning about Computer Science at UCLA,<br>';
     stdout.innerHTML += '&nbspI\'ve grown to really like the command line interface.<br>';
     stdout.innerHTML += '&nbspThat is the idea behind the design of this website.<br>';
-    stdout.innerHTML += '&nbspThis is also an opportunity for me .<br>';
   }
   else if (argv[1] == 'links.txt') {
     stdout.innerHTML += '&nbspgithub: github.com/hanstxu<br>';
@@ -56,6 +56,10 @@ function wget(stdout, argv) {
   else if (argv[1] == 'resume.pdf') {
     stdout.innerHTML += '&nbspRequest has been opened in a new window<br>';
     window.open('assets/resume.pdf', '_blank');
+  }
+  else if (argv[1] == 'projects') {
+    stdout.innerHTML += '&nbspRequest has been opened in a new window<br>';
+    window.open('https://github.com/hanstxu?tab=repositories', '_blank');
   }
   else {
     stdout.innerHTML += '&nbspRequest has been opened in a new window<br>';
