@@ -47,3 +47,14 @@ input.shell {
   font-weight: bold;
   font-family: monospace;
 }
+
+div.footer {
+  width: 640px;
+  text-align: left;
+  margin: auto;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+}
