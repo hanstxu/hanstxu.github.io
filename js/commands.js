@@ -21,10 +21,26 @@ function ls(stdout) {
 function cat(stdout, argv) {
   if (argv.length < 2)
     stdout.innerHTML += '&nbspError: no argument has been passed in<br>';
-  else if (argv[1] != 'about.txt')
-    stdout.innerHTML += '&nbspError: file not found<br>';
+  else if (argv[1] == 'about.txt') {
+    stdout.innerHTML += '&nbspThe author of this site is Steven Xu, who is in ';
+    stdout.innerHTML += 'his last year of <br>&nbspstudying computer science at UCLA.<br>';
+  }
+  else if (argv[1] == 'resume.pdf')
+    stdout.innerHTML += '&nbspCannot cat file. Maybe try wget resume.pdf<br>';
+  else if (argv[1] == 'weblog') {
+    stdout.innerHTML += '&nbspMost websites use a graphical user interface.<br>';
+    stdout.innerHTML += '&nbspUnfortunately, I think a lot of people are missing out.<br>';
+    stdout.innerHTML += '&nbspIn my years learning about Computer Science at UCLA,<br>';
+    stdout.innerHTML += '&nbspI\'ve grown to really like the command line interface.<br>';
+    stdout.innerHTML += '&nbspThat is the idea behind the design of this website.<br>';
+    stdout.innerHTML += '&nbspThis is also an opportunity for me .<br>';
+  }
+  else if (argv[1] == 'links.txt') {
+    stdout.innerHTML += '&nbspgithub: github.com/hanstxu<br>';
+    stdout.innerHTML += '&nbsplinkedin: linkedin.com/in/hanstxu<br>';
+  }
   else
-    stdout.innerHTML += '&nbspThe author of this site is Steven Xu.<br>';
+    stdout.innerHTML += '&nbspError: file not found<br>';
 }
 
 function su(argv) {
