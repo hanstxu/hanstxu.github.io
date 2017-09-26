@@ -30,6 +30,9 @@ function handleInput(stdin, value) {
     case 'su':
       su(argv);
       break;
+    case 'wget':
+      wget(stdout, argv);
+      break;
     case 'whoami':
       whoami(stdout);
       break;

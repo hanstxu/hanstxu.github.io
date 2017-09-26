@@ -2,25 +2,46 @@
  *  css/main.css
  */
 
+body {
+  text-align: center;
+  background-color: #F3ECE2;
+} 
+
+div#name {
+  font-size: 36px;
+  width: 640px;
+  height: 56px;
+  margin: auto;
+  font-family: cursive;
+}
+
+div#links {
+  color: gray;
+  font-size: 20px;
+  width: 640px;
+  height: 48px;	
+  margin: auto;
+  font-family: cursive;
+}
+ 
 div.shell {
-  background-color: black;
+  background-color: #3284BF;
   width: 640px;
   height: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   text-align: left;
-  color: white;
+  color: #FFE800;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 input.shell {
-  background-color: black;
+  background-color: #3284BF;
   border: none;
-  color: white;
+  color: #FFE800;
   font-family: sans-serif;
-  font-size:12px;
-}
-
-body {
-  text-align: center;
-  background-color: #FFFEEE;
+  font-size:16px;
+  font-weight: bold;
+  font-family: monospace;
 }

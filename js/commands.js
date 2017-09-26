@@ -4,20 +4,24 @@
 
 function help(stdout) {
   stdout.innerHTML += '&nbspThe list of commands include:<br>';
-  stdout.innerHTML += '&nbspcat<br>';
-  stdout.innerHTML += '&nbspls<br>';
-  stdout.innerHTML += '&nbspsu<br>';
-  stdout.innerHTML += '&nbspwhoami<br>';
+  stdout.innerHTML += '&nbsp cat<br>';
+  stdout.innerHTML += '&nbsp ls<br>';
+  stdout.innerHTML += '&nbsp su<br>';
+  stdout.innerHTML += '&nbsp wget<br>';
+  stdout.innerHTML += '&nbsp whoami<br>';
 }
 
 function ls(stdout) {
-  stdout.innerHTML += '&nbspabout_me.txt<br>';
+  stdout.innerHTML += '&nbspabout.txt';
+  stdout.innerHTML += '&nbsp&nbsp&nbsp&nbspresume.pdf';
+  stdout.innerHTML += '&nbsp&nbsp&nbsp&nbspweblog';
+  stdout.innerHTML += '&nbsp&nbsp&nbsp&nbsplinks.txt<br>';
 }
 
 function cat(stdout, argv) {
   if (argv.length < 2)
     stdout.innerHTML += '&nbspError: no argument has been passed in<br>';
-  else if (argv[1] != 'about_me.txt')
+  else if (argv[1] != 'about.txt')
     stdout.innerHTML += '&nbspError: file not found<br>';
   else
     stdout.innerHTML += '&nbspThe author of this site is Steven Xu.<br>';
@@ -25,9 +29,22 @@ function cat(stdout, argv) {
 
 function su(argv) {
   if (argv.length < 2)
-    stdout.innerHTML += '&nbspError: no argument has been passed in<br>'
+    stdout.innerHTML += '&nbspError: no argument has been passed in<br>';
   else
     user = argv[1];
+}
+
+function wget(stdout, argv) {
+  if (argv.length < 2)
+    stdout.innerHTML += '&nbspError: no argument has been passed in<br>';
+  else if (argv[1] == 'resume.pdf') {
+    stdout.innerHTML += '&nbspRequest has been opened in a new window<br>';
+    window.open('assets/resume.pdf', '_blank');
+  }
+  else {
+    stdout.innerHTML += '&nbspRequest has been opened in a new window<br>';
+    window.open(argv[1], '_blank');
+  }
 }
 
 function whoami(stdout) {
