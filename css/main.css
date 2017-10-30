@@ -3,9 +3,17 @@
  */
 
 body {
+  /* No margins */
+  margin: 0 !important;
+  padding: 0 !important;
   text-align: center;
+  /* Paper Color */
   background-color: #F3ECE2;
 } 
+
+div#toolbar {
+  background-color: blue;
+}
 
 div#name {
   font-size: 36px;
