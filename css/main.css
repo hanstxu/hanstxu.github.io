@@ -54,6 +54,7 @@ input.shell {
   font-size:16px;
   font-weight: bold;
   font-family: monospace;
+  width: 380px;
 }
 
 div.footer {
@@ -65,4 +66,9 @@ div.footer {
 a {
   color: gray;
   text-decoration: none;
+}
+
+/* Remove focus, specifically for text box from Chrome */
+textarea:focus, input:focus{
+  outline: none;
 }
