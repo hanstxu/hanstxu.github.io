@@ -5,6 +5,7 @@
 function help(stdout) {
   stdout.innerHTML += '&nbspThe list of commands include:<br>';
   stdout.innerHTML += '&nbsp cat<br>';
+  stdout.innerHTML += '&nbsp clear<br>';
   stdout.innerHTML += '&nbsp help<br>';
   stdout.innerHTML += '&nbsp ls<br>';
   stdout.innerHTML += '&nbsp su<br>';
@@ -37,6 +38,10 @@ function cat(stdout, argv) {
   }
   else
     stdout.innerHTML += '&nbspError: file not found<br>';
+}
+
+function clear(stdout, argv) {
+  stdout.innerHTML = '';
 }
 
 function su(argv) {

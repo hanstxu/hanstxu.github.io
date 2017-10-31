@@ -57,6 +57,9 @@ function handleInput(stdin, value) {
     case 'cat':
       cat(stdout, argv);
       break;
+    case 'clear':
+      clear(stdout, argv);
+      break;
     case 'su':
       su(argv);
       break;
